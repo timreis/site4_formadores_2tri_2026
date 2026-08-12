@@ -1,0 +1,121 @@
+/* Variáveis para facilidade de mudança de cor */
+:root {
+    --bg-color: rgb(238, 223, 243);
+    --text-color: #111111;
+    --h1-color: blue;
+    --h2-color: rgb(247, 0, 255);
+    --card-bg: rgba(255, 255, 255, 0.6);
+    --link-color: rgb(180, 0, 190);
+}
+
+/* Tema de Alto Contraste (Modo Escuro) */
+body.alto-contraste {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --h1-color: #00ffff;
+    --h2-color: #ff00ff;
+    --card-bg: #1e1e1e;
+    --link-color: #00ffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 20px;
+    margin: 20px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main, header, .barra-acessibilidade {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Barra de Botões de Acessibilidade */
+.barra-acessibilidade {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.barra-acessibilidade button {
+    padding: 8px 14px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid var(--text-color);
+    border-radius: 6px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+.barra-acessibilidade button:hover {
+    filter: brightness(0.9);
+}
+
+/* Títulos */
+h1 {
+    color: var(--h1-color);
+    text-align: center;
+    font-size: 2em;
+    font-family: "Paytone One", sans-serif;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--h2-color);
+    text-align: right;
+    font-size: 1.5em;
+    font-family: "Paytone One", sans-serif;
+    margin-top: 40px;
+}
+
+h3 {
+    color: var(--h1-color);
+    font-family: "Paytone One", sans-serif;
+    font-size: 1.3em;
+}
+
+p, dd {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+dl {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+dt {
+    font-size: 1.1em;
+    color: var(--h1-color);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+a {
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+/* Destaque para links externos com explicação */
+a.link-externo::after {
+    content: " (Link externo - abre em nova aba)";
+    font-size: 0.75em;
+    font-weight: normal;
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
